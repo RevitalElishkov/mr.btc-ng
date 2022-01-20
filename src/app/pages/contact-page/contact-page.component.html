@@ -1,0 +1,12 @@
+<section class="contact-details">
+    <!-- <contact-details *ngIf="selectedContactId; else contactList" [contactId]="selectedContactId"></contact-details>
+    <ng-template #contactList> -->
+    <div class="contact-actions">
+        <contact-filter></contact-filter>
+        <a routerLink="/edit">
+            <img src="./././assets/imgs/add-user.png" />
+        </a>
+    </div>
+    <contact-list [contacts]="contacts$|async"></contact-list>
+    <!-- </ng-template> -->
+</section>

@@ -1,0 +1,19 @@
+<section *ngIf="contact" class="contact-details">
+    <button class="back-btn" (click)="onBack()"> < Back</button>
+        <div class="contact-card">
+            <section class="contact-actions">
+                <img src="./././assets/imgs/trash.png" (click)="onRemove(contact._id)" />
+                <img src="./././assets/imgs/edit.png" (click)="goToEdit(contact._id)" /> 
+            </section>
+            <div class="details-info">
+                <img src="https://robohash.org/{{contact._id}}?set=set5" alt="img" />
+                <div class="info-txt">
+                    <h4> {{contact.name}} </h4>
+                    <h5> {{contact.email}} </h5>
+                    <h5> {{contact.phone}} </h5>
+                </div>
+            </div>
+            <transfer-fund (onTransfer)="onTransferCoins($event)" [contactName]="contact.name" [maxCoins]="user.coins"></transfer-fund>
+        </div>
+        <moves-list [moves]="mutualMoves"></moves-list>
+</section>

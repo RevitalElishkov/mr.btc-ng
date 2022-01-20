@@ -1,0 +1,12 @@
+<section class="main-app">
+    <div class="intro-container">
+        <h2>Hello, {{user.name}}!</h2>
+        <div class="main-balance">
+            <h3> Current Balance </h3>
+            <h4 class="coins-icon"> Coins: {{user.coins}}</h4>
+            <h4 class="btc-icon"> Bitcoin Rate: {{rate}}</h4>
+        </div>
+    </div>
+    <moves-list [moves]="user.moves"></moves-list>
+    <!-- <router-outlet></router-outlet> -->
+</section>
